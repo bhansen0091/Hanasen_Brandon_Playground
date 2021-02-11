@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            vertical-align: top;
+            outline: 1px dotted red;
+        }
+        #wrapper{
+            width: 1150px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header{
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1{
+
+        }
+        #mainContent{
+            width: 100%;
+            background-color: lightcyan
+        }
+        #boxContainer{
+            width: 100%;
+            padding: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;;
+        }
+        .boxes{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: {{ background_color }};
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Flask Playground!</h1>
+        </header>
+        <main id="mainContent">
+            <div id="boxContainer">
+                {% for i in range(0,times) %}
+                <div class="boxes"></div>
+                {% endfor %}
+            </div>
+        </main>
+    </div>
+</body>
+</html>
